@@ -69,10 +69,51 @@ public class Exercicios10a13 {
     }
     
     public static void Exercicio12() {
+        Scanner ent = new Scanner(System.in);
         
+        System.out.println("Insira o valor da base do primeiro Retângulo: ");
+        double base1 = ent.nextDouble();
+        System.out.println("Agora a altura: ");
+        double alt1 = ent.nextDouble();
+        System.out.println("Insira o valor da base do Segundo Retângulo: ");
+        double base2 = ent.nextDouble();
+        System.out.println("Agora a altura: ");
+        double alt2 = ent.nextDouble();
+        
+        double area1 = base1 * alt1;
+        double area2 = base2 * alt2;
+        
+        if (area1 == area2) {
+            System.out.println("Ambos os Retângulos possuem mesma área.");
+        } else {
+            System.out.println("Os Retângulos não possuem mesma área.");
+        }
     }
     
     public static void Exercicio13() {
+        Scanner ent = new Scanner(System.in);
         
+        System.out.println("Insira o valor da base do primeiro Triângulo: ");
+        double base1 = ent.nextDouble();
+        System.out.println("Agora a altura: ");
+        double alt1 = ent.nextDouble();
+        System.out.println("Insira o valor da base do segundo Triângulo: ");
+        double base2 = ent.nextDouble();
+        System.out.println("Agora a altura: ");
+        double alt2 = ent.nextDouble();
+        System.out.println("Insira o valor da base do terceiro Triângulo: ");
+        double base3 = ent.nextDouble();
+        System.out.println("Agora a altura: ");
+        double alt3 = ent.nextDouble();
+        
+        double area1 = (base1 * alt1) / 2;
+        double area2 = (base2 * alt2) / 2;
+        double area3 = (base3 * alt3) / 2;
+        
+        if (area1 == area2 && area2 == area3) {
+            System.out.println("Os três Triângulos possuem mesma área.");
+        } else {
+            System.out.println("Os Triângulos não possuem mesma área.");
+        }
     }
 }

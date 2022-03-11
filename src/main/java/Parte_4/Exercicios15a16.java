@@ -27,25 +27,29 @@ public class Exercicios15a16 {
     }
     
     public static void Exercicio15() {
-       Scanner ent = new Scanner(System.in);
+        Scanner ent = new Scanner(System.in);
        
-       System.out.println("Insira o valor da compra: ");
-       double valCompra = ent.nextDouble();
-       System.out.println("Insira a porcentagem do desconto: ");
-       int desconto = ent.nextInt();
+        System.out.println("Insira o valor da compra: ");
+        double valCompra = ent.nextDouble();
+        System.out.println("Insira a porcentagem do desconto: ");
+        int desconto = ent.nextInt();
        
-       double valDesconto = (valCompra * desconto) / 100 ;
-       double valFinal = valCompra - valDesconto;
+        double valDesconto = (valCompra * desconto) / 100 ;
+        double valFinal = valCompra - valDesconto;
        
-       System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
+        System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
     }
     
     public static void Exercicio16() {
         Scanner ent = new Scanner(System.in);
        
-       System.out.println("Insira o valor da compra: ");
-       double valCompra = ent.nextDouble();
-       System.out.println("Insira o valor a ser descontado: ");
-       double valDesconto = ent.nextDouble();
+        System.out.println("Insira o valor da compra: ");
+        double valCompra = ent.nextDouble();
+        System.out.println("Insira o valor a ser descontado: ");
+        double valDesconto = ent.nextDouble();
+       
+        double valFinal = valCompra - valDesconto;
+        double porcDesconto = (valDesconto * 100) / valCompra ;
+        System.out.println("O valor final será: "+valFinal+"\nPorcentagem de desconto: "+porcDesconto+"%");
     }
 }

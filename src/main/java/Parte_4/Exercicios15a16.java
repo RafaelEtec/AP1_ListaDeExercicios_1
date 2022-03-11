@@ -41,6 +41,9 @@ public class Exercicios15a16 {
     }
     
     public static void Exercicio16() {
-        
+        Scanner ent = new Scanner(System.in);
+       
+       System.out.println("Insira o valor da compra");
+       double valCompra = ent.nextDouble();
     }
 }

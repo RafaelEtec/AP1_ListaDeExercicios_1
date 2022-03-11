@@ -29,9 +29,9 @@ public class Exercicios15a16 {
     public static void Exercicio15() {
        Scanner ent = new Scanner(System.in);
        
-       System.out.println("Insira o valor da compra");
+       System.out.println("Insira o valor da compra: ");
        double valCompra = ent.nextDouble();
-       System.out.println("Insira a porcentagem do desconto");
+       System.out.println("Insira a porcentagem do desconto: ");
        int desconto = ent.nextInt();
        
        double valDesconto = (valCompra * desconto) / 100 ;
@@ -43,7 +43,9 @@ public class Exercicios15a16 {
     public static void Exercicio16() {
         Scanner ent = new Scanner(System.in);
        
-       System.out.println("Insira o valor da compra");
+       System.out.println("Insira o valor da compra: ");
        double valCompra = ent.nextDouble();
+       System.out.println("Insira o valor a ser descontado: ");
+       double valDesconto = ent.nextDouble();
     }
 }

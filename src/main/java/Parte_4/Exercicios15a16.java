@@ -16,18 +16,28 @@ public class Exercicios15a16 {
         }
         switch (escolha) {
             case 15:
-                System.out.println("Implementar uma função para verificar se um aluno passou ou não, baseado em 3 notas\nConsiderando que a média mínima para passar é 5.\n");
+                System.out.println("Implementar uma função para calcular o valor final de uma compra a partir de um cupom de desconto. O cupom diz quantos reais terá de desconto.\n");
                 Exercicio15();
                 break;
             case 16:
-                System.out.println("Implementar uma função para verificar se dois quadrados possuem a mesma área.\n");
+                System.out.println("Implementar uma função para calcular o valor final de uma compra a partir de um cupom de desconto. O cupom diz a porcentagem que terá de desconto.\n");
                 Exercicio16();
                 break;
         }
     }
     
     public static void Exercicio15() {
-        
+       Scanner ent = new Scanner(System.in);
+       
+       System.out.println("Insira o valor da compra");
+       double valCompra = ent.nextDouble();
+       System.out.println("Insira a porcentagem do desconto");
+       int desconto = ent.nextInt();
+       
+       double valDesconto = (valCompra * desconto) / 100 ;
+       double valFinal = valCompra - valDesconto;
+       
+       System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
     }
     
     public static void Exercicio16() {

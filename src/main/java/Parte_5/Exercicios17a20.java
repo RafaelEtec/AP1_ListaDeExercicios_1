@@ -37,10 +37,6 @@ public class Exercicios17a20 {
     public static void Exercicio17() {
         Scanner ent = new Scanner(System.in);
         
-        String ve = "vermelho";
-        String az = "azul";
-        String am = "amarelo";
-        
         System.out.println("Escreva o nome da cor: ");
         String cor = ent.next();
         if (cor.toLowerCase().equals("vermelho") || cor.toLowerCase().equals("azul") || cor.toLowerCase().equals("amarelo")) {
@@ -67,9 +63,39 @@ public class Exercicios17a20 {
     
     public static void Exercicio19() {
         Scanner ent = new Scanner(System.in);
+       
+        System.out.println("Escreva o nome da primeira cor: ");
+        String cor1 = ent.next();
+        System.out.println("Agora escreva o nome da segunda cor: ");
+        String cor2 = ent.next();
+       
+        if (cor1.toLowerCase().equals("vermelho") || cor1.toLowerCase().equals("amarelo") || cor1.toLowerCase().equals("azul")) {
+            if (cor2.toLowerCase().equals("vermelho") || cor2.toLowerCase().equals("amarelo") || cor2.toLowerCase().equals("azul")) {
+                System.out.println("Ambas as cores sao Primárias.");
+            } else {
+                System.out.println("Apenas a cor "+cor1+" é primária.");
+            }
+        } else if (cor2.toLowerCase().equals("vermelho") || cor2.toLowerCase().equals("amarelo") || cor2.toLowerCase().equals("azul")) {
+            System.out.println("Apenas a cor "+cor2+" é primária.");  
+        } else {
+            System.out.println("Nenhuma das cores inseridas é primária!");  
+        }
     }
     
     public static void Exercicio20() {
         Scanner ent = new Scanner(System.in);
+        
+        System.out.println("Insira o valor do primeiro lado: ");
+        double lado1 = ent.nextDouble();
+        System.out.println("Insira o valor do segundo lado: ");
+        double lado2 = ent.nextDouble();
+        System.out.println("Insira o valor do terceiro lado: ");
+        double lado3 = ent.nextDouble();
+        
+        if (lado1 == lado2 && lado2 == lado3) {
+            System.out.println("É um Triângulo Equilátero!");
+        } else {
+            System.out.println("NÃO é um Triângulo Equilátero pois os três lados não são iguais.");    
+        }
     }
 }

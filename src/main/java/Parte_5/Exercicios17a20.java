@@ -36,10 +36,33 @@ public class Exercicios17a20 {
     
     public static void Exercicio17() {
         Scanner ent = new Scanner(System.in);
+        
+        String ve = "vermelho";
+        String az = "azul";
+        String am = "amarelo";
+        
+        System.out.println("Escreva o nome da cor: ");
+        String cor = ent.next();
+        if (cor.toLowerCase().equals("vermelho") || cor.toLowerCase().equals("azul") || cor.toLowerCase().equals("amarelo")) {
+            System.out.println("A cor "+cor+" é primária.");
+        } else {
+            System.out.println("A cor "+cor+" NÃO é primária! ! !");
+        }
     }
     
     public static void Exercicio18() {
         Scanner ent = new Scanner(System.in);
+        
+        String pode = "verde";
+        String npode = "vermelho";
+        
+        System.out.println("Qual a cor do farol agora?");
+        String cor = ent.next();
+        if (cor.toLowerCase().equals(pode)) {
+            System.out.println("O farol está Verde, por isso você pode atravessar a rua.");
+        } else if (cor.toLowerCase().equals(npode)) {
+            System.out.println("O farol está vermelho, por isso você NÃO pode atravessar a rua!");
+        }
     }
     
     public static void Exercicio19() {

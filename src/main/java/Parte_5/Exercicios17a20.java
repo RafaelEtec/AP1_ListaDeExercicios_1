@@ -54,10 +54,13 @@ public class Exercicios17a20 {
         
         System.out.println("Qual a cor do farol agora?");
         String cor = ent.next();
+        
         if (cor.toLowerCase().equals(pode)) {
             System.out.println("O farol está Verde, por isso você pode atravessar a rua.");
         } else if (cor.toLowerCase().equals(npode)) {
             System.out.println("O farol está vermelho, por isso você NÃO pode atravessar a rua!");
+        } else if (cor.toLowerCase() != pode || cor.toLowerCase() != npode) {
+            System.out.println("A cor inserida não pode ser usada!");
         }
     }
     

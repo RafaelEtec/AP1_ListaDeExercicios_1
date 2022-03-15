@@ -32,12 +32,22 @@ public class Exercicios15a16 {
         System.out.println("Insira o valor da compra: ");
         double valCompra = ent.nextDouble();
         System.out.println("Insira a porcentagem do desconto: ");
-        int desconto = ent.nextInt();
+        int porcDesconto = ent.nextInt();
        
-        double valDesconto = (valCompra * desconto) / 100 ;
+        double valDesconto = valDesconto(valCompra, porcDesconto);
         double valFinal = valCompra - valDesconto;
        
         System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
+    }
+    
+    public static double valDesconto(double valCompra, int porcDesconto) {
+        double valDesconto = (valCompra * porcDesconto) / 100;
+        return valDesconto;
+    }
+    
+    public static double valFinal(double valCompra, double valDesconto) {
+        double valFinal = valCompra - valDesconto;
+        return valFinal;
     }
     
     public static void Exercicio16() {
@@ -48,8 +58,13 @@ public class Exercicios15a16 {
         System.out.println("Insira o valor a ser descontado: ");
         double valDesconto = ent.nextDouble();
        
-        double valFinal = valCompra - valDesconto;
-        double porcDesconto = (valDesconto * 100) / valCompra ;
+        double valFinal = valFinal(valCompra, valDesconto);
+        double porcDesconto = porcDesconto(valCompra, valDesconto);
         System.out.println("O valor final será: "+valFinal+"\nPorcentagem de desconto: "+porcDesconto+"%");
+    }
+    
+    public static double porcDesconto(double valCompra, double valDesconto) {
+        double porcDesconto = (valDesconto * 100) / valCompra;
+        return porcDesconto;
     }
 }

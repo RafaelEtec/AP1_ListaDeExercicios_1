@@ -43,9 +43,13 @@ public class Exercicios1a5 {
         
         System.out.println("Insira o valor: ");
         double val = ent.nextDouble();
-        double res = val * 2;
-        
+        double res = dobro(val);
         System.out.println("O Dobro de "+val+" é: "+res);
+    }
+    
+    public static double dobro(double val) {
+        double res = val * 2;
+        return res;
     }
     
     public static void Exercicio2() {
@@ -53,9 +57,13 @@ public class Exercicios1a5 {
         
         System.out.println("Insira o valor: ");
         double val = ent.nextDouble();
-        double res = val * 3;
-        
+        double res = triplo(val);
         System.out.println("O Triplo de "+val+" é: "+res); 
+    }
+    
+    public static double triplo(double val) {
+        double res = val * 3;
+        return res;
     }
     
     public static void Exercicio3() {
@@ -63,9 +71,13 @@ public class Exercicios1a5 {
         
         System.out.println("Insira o valor: ");
         double val = ent.nextDouble();
-        double res = val / 2;
-        
+        double res = metade(val);
         System.out.println("A Metade de "+val+" é: "+res);
+    }
+    
+    public static double metade(double val) {
+        double res = val / 2;
+        return res;
     }
     
     public static void Exercicio4() {
@@ -73,9 +85,13 @@ public class Exercicios1a5 {
         
         System.out.println("Insira o valor do lado do Quadrado: ");
         double val = ent.nextDouble();
-        double res = val * val;
-        
+        double res = areaQuad(val);
         System.out.println("A área do Quadrado é de: "+res+"cm²");
+    }
+    
+    public static double areaQuad(double val) {
+        double res = val * val;
+        return res;
     }
     
     public static void Exercicio5() {
@@ -85,8 +101,12 @@ public class Exercicios1a5 {
         double base = ent.nextDouble();
         System.out.println("Agora a altura: ");
         double alt = ent.nextDouble();
-        double res = base * alt;
-        
+        double res = areaRetan(base,alt);
         System.out.println("A área do Retângulo é de: "+res+"cm²");
+    }
+    
+    public static double areaRetan(double base, double alt) {
+        double res = base * alt;
+        return res;
     }
 }

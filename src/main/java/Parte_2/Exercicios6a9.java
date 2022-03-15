@@ -2,6 +2,7 @@ package Parte_2;
 import java.util.Scanner;
 /**
    por Rafael Ferreira Goulart
+   * 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
 **/
 public class Exercicios6a9 {
     public static void main(String[] args) {
@@ -41,9 +42,13 @@ public class Exercicios6a9 {
         double base = ent.nextDouble();
         System.out.println("Agora a altura: ");
         double alt = ent.nextDouble();
-        double res = (base * alt) / 2;
-        
+        double res = areaTri(base, alt);
         System.out.println("A área do Triângulo é de: "+res+"cm²");
+    }
+    
+    public static double areaTri(double base, double alt) {
+        double res = (base * alt) / 2;
+        return res;
     }
     
     public static void Exercicio7() {
@@ -51,9 +56,13 @@ public class Exercicios6a9 {
         
         System.out.println("Insira o valor do lado do Octógono: ");
         double lado = ent.nextDouble();
-        double res = lado * 8;
-        
+        double res = perimetroOctogono(lado);
         System.out.println("O perímetro do Octógono é de: "+res+"cm");
+    }
+    
+    public static double perimetroOctogono(double lado) {
+        double res = lado * 8;
+        return res;
     }
     
     public static void Exercicio8() {
@@ -65,9 +74,13 @@ public class Exercicios6a9 {
         double n2 = ent.nextDouble();
         System.out.println("Insira a Terceira nota: ");
         double n3 = ent.nextDouble();
-        double res = (n1 + n2 + n3) / 3;
-        
+        double res = media3notas(n1, n2, n3);
         System.out.println("Sua média é de: "+res);
+    }
+    
+    public static double media3notas(double n1, double n2, double n3) {
+        double media = (n1 + n2 + n3) / 3;
+        return media;
     }
     
     public static void Exercicio9() {
@@ -83,8 +96,12 @@ public class Exercicios6a9 {
         double n4 = ent.nextDouble();
         System.out.println("Insira a Quinta nota: ");
         double n5 = ent.nextDouble();
-        double res = (n1 + n2 + n3 + n4 + n5) / 5;
-        
+        double res = media5notas(n1, n2, n3, n4, n5);
         System.out.println("Sua média é de: "+res);
+    }
+    
+    public static double media5notas(double n1, double n2, double n3, double n4, double n5) {
+        double media = (n1 + n2 + n3 + n4 + n5) / 5;
+        return media;
     }
 }

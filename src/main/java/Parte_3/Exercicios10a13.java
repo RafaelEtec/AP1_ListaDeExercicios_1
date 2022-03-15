@@ -1,5 +1,6 @@
 package Parte_3;
 import java.util.Scanner;
+import Parte_2.Exercicios6a9;
 /**
    por Rafael Ferreira Goulart
 **/
@@ -43,12 +44,20 @@ public class Exercicios10a13 {
         double n2 = ent.nextDouble();
         System.out.println("Insira a Terceira nota: ");
         double n3 = ent.nextDouble();
-        double media = (n1 + n2 + n3) / 3;
-        
-        if (media >= 5) {
-            System.out.println("Você Passou!");
+        double media = Exercicios6a9.media3notas(n1, n2, n3);
+        boolean passou = passouMedia5(media);
+        if (passou == true) {
+            System.out.println("Você passou!");
         } else {
-            System.out.println("Você não Passou.");
+            System.out.println("Você NÃO passou!");
+        }
+    }
+    
+    public static boolean passouMedia5(double media) {
+        if (media >= 5) {
+            return true;
+        } else {
+            return false;
         }
     }
     
@@ -59,12 +68,26 @@ public class Exercicios10a13 {
         double lado1 = ent.nextDouble();
         System.out.println("Insira o valor do lado do segundo Quadrado");
         double lado2 = ent.nextDouble();
-        double area1 = lado1 * lado1;
-        double area2 = lado2 * lado2;
-        if (area1 == area2) {
+        double area1 = areaQuad(lado1);
+        double area2 = areaQuad(lado2);
+        boolean areaIgualQuad = areaIgual2Quad(area1, area2);
+        if (areaIgualQuad == true) {
             System.out.println("Ambos os Quadrados possuem mesma área.");
         } else {
             System.out.println("Os Quadrados não possuem mesma área.");
+        }
+    }
+    
+    public static double areaQuad(double lado) {
+        double area = lado * lado;
+        return area;
+    }
+    
+    public static boolean areaIgual2Quad(double area1, double area2) {
+        if (area1 == area2) {
+            return true;
+        } else {
+            return false;
         }
     }
     
@@ -79,14 +102,26 @@ public class Exercicios10a13 {
         double base2 = ent.nextDouble();
         System.out.println("Agora a altura: ");
         double alt2 = ent.nextDouble();
-        
-        double area1 = base1 * alt1;
-        double area2 = base2 * alt2;
-        
-        if (area1 == area2) {
+        double area1 = areaRetan(base1,alt1);
+        double area2 = areaRetan(base2,alt2);
+        boolean areaIgualRetan = areaIgual2Retan(area1, area2);
+        if (areaIgualRetan == true) {
             System.out.println("Ambos os Retângulos possuem mesma área.");
         } else {
             System.out.println("Os Retângulos não possuem mesma área.");
+        }
+    }
+    
+    public static double areaRetan(double base, double alt) {
+        double area = base * alt;
+        return area;
+    }
+    
+    public static boolean areaIgual2Retan(double area1, double area2) {
+        if (area1 == area2) {
+            return true;
+        } else {
+            return false;
         }
     }
     
@@ -105,15 +140,27 @@ public class Exercicios10a13 {
         double base3 = ent.nextDouble();
         System.out.println("Agora a altura: ");
         double alt3 = ent.nextDouble();
-        
-        double area1 = (base1 * alt1) / 2;
-        double area2 = (base2 * alt2) / 2;
-        double area3 = (base3 * alt3) / 2;
-        
-        if (area1 == area2 && area2 == area3) {
+        double area1 = areaTri(base1, alt1);
+        double area2 = areaTri(base2, alt2);
+        double area3 = areaTri(base3, alt3);
+        boolean areaIgualTri = areaIgual3Tri(area1, area2, area3);
+        if (areaIgualTri == true) {
             System.out.println("Os três Triângulos possuem mesma área.");
         } else {
             System.out.println("Os Triângulos não possuem mesma área.");
+        }
+    }
+    
+    public static double areaTri(double base, double alt) {
+        double area = (base * alt) / 2;
+        return area;
+    }
+    
+    public static boolean areaIgual3Tri(double area1, double area2, double area3) {
+        if (area1 == area2 && area2 == area3) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

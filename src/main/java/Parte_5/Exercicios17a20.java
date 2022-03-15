@@ -81,7 +81,7 @@ public class Exercicios17a20 {
         } else if (cor2.toLowerCase().equals("vermelho") || cor2.toLowerCase().equals("amarelo") || cor2.toLowerCase().equals("azul")) {
             System.out.println("Apenas a cor "+cor2+" é primária.");  
         } else {
-            System.out.println("Nenhuma das cores inseridas é primária!");  
+            System.out.println("Nenhuma das cores inseridas são primárias!");  
         }
     }
     
@@ -95,10 +95,13 @@ public class Exercicios17a20 {
         System.out.println("Insira o valor do terceiro lado: ");
         double lado3 = ent.nextDouble();
         
-        if (lado1 == lado2 && lado2 == lado3) {
-            System.out.println("É um Triângulo Equilátero!");
-        } else {
-            System.out.println("NÃO é um Triângulo Equilátero pois os três lados não são iguais.");    
-        }
+        boolean x = trianguloEquilatero(lado1, lado2, lado3);
+        System.out.println("É um Triângulo Equilátero ? " + x);
+        
+    }
+    
+    public static boolean trianguloEquilatero(double lado1, double lado2, double lado3) {
+        boolean iguais = lado1 == lado2 && lado2 == lado3;
+        return iguais;
     }
 }

@@ -39,29 +39,37 @@ public class Exercicios17a20 {
         
         System.out.println("Escreva o nome da cor: ");
         String cor = ent.next();
-        if (cor.toLowerCase().equals("vermelho") || cor.toLowerCase().equals("azul") || cor.toLowerCase().equals("amarelo")) {
-            System.out.println("A cor "+cor+" é primária.");
+        boolean corPrimaria = corPrimaria(cor);
+        if (corPrimaria == true) {
+            System.out.println("A cor "+cor+" é Primária!");
         } else {
-            System.out.println("A cor "+cor+" NÃO é primária! ! !");
+            System.out.println("A cor "+cor+" NÃO é Primária.");
         }
+    }
+    
+    public static boolean corPrimaria(String cor) {
+        return cor.toLowerCase().equals("vermelho") || cor.toLowerCase().equals("azul") || cor.toLowerCase().equals("amarelo");
     }
     
     public static void Exercicio18() {
         Scanner ent = new Scanner(System.in);
         
-        String pode = "verde";
-        String npode = "vermelho";
-        
         System.out.println("Qual a cor do farol agora?");
-        String cor = ent.next();
-        
-        if (cor.toLowerCase().equals(pode)) {
-            System.out.println("O farol está Verde, por isso você pode atravessar a rua.");
-        } else if (cor.toLowerCase().equals(npode)) {
-            System.out.println("O farol está vermelho, por isso você NÃO pode atravessar a rua!");
-        } else if (cor.toLowerCase() != pode || cor.toLowerCase() != npode) {
-            System.out.println("A cor inserida não pode ser usada!");
+        String corFarol = ent.next();
+        String retornoFarol = podeAtravessar(corFarol);
+        System.out.println(retornoFarol);
+    }
+    
+    public static String podeAtravessar(String corFarol) {
+        String retornoFarol = "";
+        if (corFarol.toLowerCase().equals("verde")) {
+            retornoFarol = "O Farol está "+corFarol+", Você pode atravessar.";
+        } else if (corFarol.toLowerCase().equals("vermelho")) {
+            retornoFarol = "O Farol está "+corFarol+", Você NÃO PODE atravessar!";
+        } else {
+            retornoFarol = "A cor Inserida não pode ser usada!";
         }
+        return retornoFarol;
     }
     
     public static void Exercicio19() {
@@ -71,17 +79,18 @@ public class Exercicios17a20 {
         String cor1 = ent.next();
         System.out.println("Agora escreva o nome da segunda cor: ");
         String cor2 = ent.next();
-       
-        if (cor1.toLowerCase().equals("vermelho") || cor1.toLowerCase().equals("amarelo") || cor1.toLowerCase().equals("azul")) {
-            if (cor2.toLowerCase().equals("vermelho") || cor2.toLowerCase().equals("amarelo") || cor2.toLowerCase().equals("azul")) {
-                System.out.println("Ambas as cores sao Primárias.");
+        boolean corP1 = corPrimaria(cor1);
+        boolean corP2 = corPrimaria(cor2);
+        if (corP1 == true) {
+            if (corP2 == true) {
+                System.out.println("Ambas as cores são Primárias.");
             } else {
-                System.out.println("Apenas a cor "+cor1+" é primária.");
+                System.out.println("Apenas a cor "+cor1+" é Primária.");
             }
-        } else if (cor2.toLowerCase().equals("vermelho") || cor2.toLowerCase().equals("amarelo") || cor2.toLowerCase().equals("azul")) {
-            System.out.println("Apenas a cor "+cor2+" é primária.");  
+        } else if (corP2 == true) {
+            System.out.println("Apenas a cor "+cor2+" é Primária.");
         } else {
-            System.out.println("Nenhuma das cores inseridas são primárias!");  
+            System.out.println("Nenhuma das cores é Primária!");
         }
     }
     
@@ -93,11 +102,13 @@ public class Exercicios17a20 {
         System.out.println("Insira o valor do segundo lado: ");
         double lado2 = ent.nextDouble();
         System.out.println("Insira o valor do terceiro lado: ");
-        double lado3 = ent.nextDouble();
-        
-        boolean x = trianguloEquilatero(lado1, lado2, lado3);
-        System.out.println("É um Triângulo Equilátero ? " + x);
-        
+        double lado3 = ent.nextDouble(); 
+        boolean triEquilatero = trianguloEquilatero(lado1, lado2, lado3);
+        if (triEquilatero == true) {
+            System.out.println("É um Triângulo Equilátero!");
+        } else {
+            System.out.println("Não é um Triângulo Equilátero.");
+        }
     }
     
     public static boolean trianguloEquilatero(double lado1, double lado2, double lado3) {

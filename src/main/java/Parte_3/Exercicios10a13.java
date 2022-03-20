@@ -84,11 +84,7 @@ public class Exercicios10a13 {
     }
     
     public static boolean areaIgual2Quad(double area1, double area2) {
-        if (area1 == area2) {
-            return true;
-        } else {
-            return false;
-        }
+        return area1 == area2;
     }
     
     public static void Exercicio12() {
@@ -118,11 +114,7 @@ public class Exercicios10a13 {
     }
     
     public static boolean areaIgual2Retan(double area1, double area2) {
-        if (area1 == area2) {
-            return true;
-        } else {
-            return false;
-        }
+        return area1 == area2;
     }
     
     public static void Exercicio13() {
@@ -157,10 +149,6 @@ public class Exercicios10a13 {
     }
     
     public static boolean areaIgual3Tri(double area1, double area2, double area3) {
-        if (area1 == area2 && area2 == area3) {
-            return true;
-        } else {
-            return false;
-        }
+        return area1 == area2 && area2 == area3;
     }
 }

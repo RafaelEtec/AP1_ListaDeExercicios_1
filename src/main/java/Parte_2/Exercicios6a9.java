@@ -2,7 +2,6 @@ package Parte_2;
 import java.util.Scanner;
 /**
    por Rafael Ferreira Goulart
-   * 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
 **/
 public class Exercicios6a9 {
     public static void main(String[] args) {

@@ -102,17 +102,21 @@ public class Exercicios17a20 {
     public static void Exercicio20() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor do primeiro lado: ");
-        double lado1 = ent.nextDouble();
-        System.out.println("Insira o valor do segundo lado: ");
-        double lado2 = ent.nextDouble();
-        System.out.println("Insira o valor do terceiro lado: ");
-        double lado3 = ent.nextDouble(); 
-        boolean triEquilatero = trianguloEquilatero(lado1, lado2, lado3);
-        if (triEquilatero == true) {
-            System.out.println("É um Triângulo Equilátero!");
-        } else {
-            System.out.println("Não é um Triângulo Equilátero.");
+        try {
+            System.out.println("Insira o valor do primeiro lado: ");
+            double lado1 = ent.nextDouble();
+            System.out.println("Insira o valor do segundo lado: ");
+            double lado2 = ent.nextDouble();
+            System.out.println("Insira o valor do terceiro lado: ");
+            double lado3 = ent.nextDouble(); 
+            boolean triEquilatero = trianguloEquilatero(lado1, lado2, lado3);
+            if (triEquilatero == true) {
+                System.out.println("É um Triângulo Equilátero!");
+            } else {
+                System.out.println("Não é um Triângulo Equilátero.");
+            }
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
         }
     }
     

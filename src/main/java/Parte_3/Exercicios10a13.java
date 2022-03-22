@@ -43,19 +43,23 @@ public class Exercicios10a13 {
     public static void Exercicio10() {
         Scanner ent = new Scanner(System.in);
         
-        String strPassou = "Você não Passou!";
-        System.out.println("Insira a Primeira nota: ");
-        double n1 = ent.nextDouble();
-        System.out.println("Insira a Segunda nota: ");
-        double n2 = ent.nextDouble();
-        System.out.println("Insira a Terceira nota: ");
-        double n3 = ent.nextDouble();
-        double media = Exercicios6a9.media3notas(n1, n2, n3);
-        boolean passou = passouMedia5(media);
-        if (passou == true) {
-            strPassou = "Você Passou!";
+        try {
+            String strPassou = "Você NÃO Passou!";
+            System.out.println("Insira a Primeira nota: ");
+            double n1 = ent.nextDouble();
+            System.out.println("Insira a Segunda nota: ");
+            double n2 = ent.nextDouble();
+            System.out.println("Insira a Terceira nota: ");
+            double n3 = ent.nextDouble();
+            double media = Exercicios6a9.media3notas(n1, n2, n3);
+            boolean passou = passouMedia5(media);
+            if (passou == true) {
+                strPassou = "Você Passou!";
+            }
+            System.out.println(strPassou);
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
         }
-        System.out.println(strPassou);
     }
     
     public static boolean passouMedia5(double media) {
@@ -69,17 +73,21 @@ public class Exercicios10a13 {
     public static void Exercicio11() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor do lado do primeiro Quadrado");
-        double lado1 = ent.nextDouble();
-        System.out.println("Insira o valor do lado do segundo Quadrado");
-        double lado2 = ent.nextDouble();
-        double area1 = areaQuad(lado1);
-        double area2 = areaQuad(lado2);
-        boolean areaIgualQuad = areaIgual2Quad(area1, area2);
-        if (areaIgualQuad == true) {
-            System.out.println("Ambos os Quadrados possuem mesma área.");
-        } else {
-            System.out.println("Os Quadrados não possuem mesma área.");
+        try {
+            System.out.println("Insira o valor do lado do primeiro Quadrado");
+            double lado1 = ent.nextDouble();
+            System.out.println("Insira o valor do lado do segundo Quadrado");
+            double lado2 = ent.nextDouble();
+            double area1 = areaQuad(lado1);
+            double area2 = areaQuad(lado2);
+            boolean areaIgualQuad = areaIgual2Quad(area1, area2);
+            if (areaIgualQuad == true) {
+                System.out.println("Ambos os Quadrados possuem mesma área.");
+            } else {
+                System.out.println("Os Quadrados não possuem mesma área.");
+            }
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
         }
     }
     
@@ -95,21 +103,25 @@ public class Exercicios10a13 {
     public static void Exercicio12() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor da base do primeiro Retângulo: ");
-        double base1 = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt1 = ent.nextDouble();
-        System.out.println("Insira o valor da base do Segundo Retângulo: ");
-        double base2 = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt2 = ent.nextDouble();
-        double area1 = areaRetan(base1,alt1);
-        double area2 = areaRetan(base2,alt2);
-        boolean areaIgualRetan = areaIgual2Retan(area1, area2);
-        if (areaIgualRetan == true) {
-            System.out.println("Ambos os Retângulos possuem mesma área.");
-        } else {
-            System.out.println("Os Retângulos não possuem mesma área.");
+        try {
+            System.out.println("Insira o valor da base do primeiro Retângulo: ");
+            double base1 = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt1 = ent.nextDouble();
+            System.out.println("Insira o valor da base do Segundo Retângulo: ");
+            double base2 = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt2 = ent.nextDouble();
+            double area1 = areaRetan(base1,alt1);
+            double area2 = areaRetan(base2,alt2);
+            boolean areaIgualRetan = areaIgual2Retan(area1, area2);
+            if (areaIgualRetan == true) {
+                System.out.println("Ambos os Retângulos possuem mesma área.");
+            } else {
+                System.out.println("Os Retângulos não possuem mesma área.");
+            }
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
         }
     }
     
@@ -125,26 +137,30 @@ public class Exercicios10a13 {
     public static void Exercicio13() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor da base do primeiro Triângulo: ");
-        double base1 = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt1 = ent.nextDouble();
-        System.out.println("Insira o valor da base do segundo Triângulo: ");
-        double base2 = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt2 = ent.nextDouble();
-        System.out.println("Insira o valor da base do terceiro Triângulo: ");
-        double base3 = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt3 = ent.nextDouble();
-        double area1 = areaTri(base1, alt1);
-        double area2 = areaTri(base2, alt2);
-        double area3 = areaTri(base3, alt3);
-        boolean areaIgualTri = areaIgual3Tri(area1, area2, area3);
-        if (areaIgualTri == true) {
-            System.out.println("Os três Triângulos possuem mesma área.");
-        } else {
-            System.out.println("Os Triângulos não possuem mesma área.");
+        try {
+            System.out.println("Insira o valor da base do primeiro Triângulo: ");
+            double base1 = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt1 = ent.nextDouble();
+            System.out.println("Insira o valor da base do segundo Triângulo: ");
+            double base2 = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt2 = ent.nextDouble();
+            System.out.println("Insira o valor da base do terceiro Triângulo: ");
+            double base3 = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt3 = ent.nextDouble();
+            double area1 = areaTri(base1, alt1);
+            double area2 = areaTri(base2, alt2);
+            double area3 = areaTri(base3, alt3);
+            boolean areaIgualTri = areaIgual3Tri(area1, area2, area3);
+            if (areaIgualTri == true) {
+                System.out.println("Os três Triângulos possuem mesma área.");
+            } else {
+                System.out.println("Os Triângulos não possuem mesma área.");
+            }
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
         }
     }
     

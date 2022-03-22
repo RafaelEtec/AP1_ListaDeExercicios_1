@@ -33,16 +33,20 @@ public class Exercicios15a16 {
     
     public static void Exercicio15() {
         Scanner ent = new Scanner(System.in);
-       
-        System.out.println("Insira o valor da compra: ");
-        double valCompra = ent.nextDouble();
-        System.out.println("Insira a porcentagem do desconto: ");
-        int porcDesconto = ent.nextInt();
-       
-        double valDesconto = valDesconto(valCompra, porcDesconto);
-        double valFinal = valCompra - valDesconto;
-       
-        System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
+        
+        try {
+            System.out.println("Insira o valor da compra: ");
+            double valCompra = ent.nextDouble();
+            System.out.println("Insira a porcentagem do desconto: ");
+            int porcDesconto = ent.nextInt();
+
+            double valDesconto = valDesconto(valCompra, porcDesconto);
+            double valFinal = valCompra - valDesconto;
+
+            System.out.println("Será descontado: "+valDesconto+" da compra\nValor Final da compra: "+valFinal);
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double valDesconto(double valCompra, int porcDesconto) {
@@ -58,14 +62,18 @@ public class Exercicios15a16 {
     public static void Exercicio16() {
         Scanner ent = new Scanner(System.in);
        
-        System.out.println("Insira o valor da compra: ");
-        double valCompra = ent.nextDouble();
-        System.out.println("Insira o valor a ser descontado: ");
-        double valDesconto = ent.nextDouble();
-       
-        double valFinal = valFinal(valCompra, valDesconto);
-        double porcDesconto = porcDesconto(valCompra, valDesconto);
-        System.out.println("O valor final será: "+valFinal+"\nPorcentagem de desconto: "+porcDesconto+"%");
+        try {
+            System.out.println("Insira o valor da compra: ");
+            double valCompra = ent.nextDouble();
+            System.out.println("Insira o valor a ser descontado: ");
+            double valDesconto = ent.nextDouble();
+
+            double valFinal = valFinal(valCompra, valDesconto);
+            double porcDesconto = porcDesconto(valCompra, valDesconto);
+            System.out.println("O valor final será: "+valFinal+"\nPorcentagem de desconto: "+porcDesconto+"%");
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double porcDesconto(double valCompra, double valDesconto) {

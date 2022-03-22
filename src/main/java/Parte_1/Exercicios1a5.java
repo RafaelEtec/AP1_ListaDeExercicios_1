@@ -46,10 +46,14 @@ public class Exercicios1a5 {
     public static void Exercicio1() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor: ");
-        double val = ent.nextDouble();
-        double res = dobro(val);
-        System.out.println("O Dobro de "+val+" é: "+res);
+        try {
+            System.out.println("Insira o valor: ");
+            double val = ent.nextDouble();
+            double res = dobro(val);
+            System.out.println("O Dobro de "+val+" é: "+res);
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double dobro(double val) {
@@ -60,10 +64,14 @@ public class Exercicios1a5 {
     public static void Exercicio2() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor: ");
-        double val = ent.nextDouble();
-        double res = triplo(val);
-        System.out.println("O Triplo de "+val+" é: "+res); 
+        try { 
+            System.out.println("Insira o valor: ");
+            double val = ent.nextDouble();
+            double res = triplo(val);
+            System.out.println("O Triplo de "+val+" é: "+res); 
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double triplo(double val) {
@@ -74,10 +82,14 @@ public class Exercicios1a5 {
     public static void Exercicio3() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor: ");
-        double val = ent.nextDouble();
-        double res = metade(val);
-        System.out.println("A Metade de "+val+" é: "+res);
+        try {
+            System.out.println("Insira o valor: ");
+            double val = ent.nextDouble();
+            double res = metade(val);
+            System.out.println("A Metade de "+val+" é: "+res);
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double metade(double val) {
@@ -88,10 +100,14 @@ public class Exercicios1a5 {
     public static void Exercicio4() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor do lado do Quadrado: ");
-        double val = ent.nextDouble();
-        double res = areaQuad(val);
-        System.out.println("A área do Quadrado é de: "+res+"cm²");
+        try {
+            System.out.println("Insira o valor do lado do Quadrado: ");
+            double val = ent.nextDouble();
+            double res = areaQuad(val);
+            System.out.println("A área do Quadrado é de: "+res+"cm²");
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double areaQuad(double val) {
@@ -102,12 +118,16 @@ public class Exercicios1a5 {
     public static void Exercicio5() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Insira o valor da base do Retângulo: ");
-        double base = ent.nextDouble();
-        System.out.println("Agora a altura: ");
-        double alt = ent.nextDouble();
-        double res = areaRetan(base,alt);
-        System.out.println("A área do Retângulo é de: "+res+"cm²");
+        try {
+            System.out.println("Insira o valor da base do Retângulo: ");
+            double base = ent.nextDouble();
+            System.out.println("Agora a altura: ");
+            double alt = ent.nextDouble();
+            double res = areaRetan(base,alt);
+            System.out.println("A área do Retângulo é de: "+res+"cm²");
+        } catch (Exception ex) {
+            System.out.println("Letras não são perminitdas!");
+        }
     }
     
     public static double areaRetan(double base, double alt) {

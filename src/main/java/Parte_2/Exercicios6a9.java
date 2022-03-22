@@ -9,10 +9,15 @@ public class Exercicios6a9 {
         System.out.println(
                   "Qual atividade você deseja avaliar?\n"
                 + "Insira o número da atividade de 6 a 9");
-        int escolha = ent.nextInt();
-        while (escolha < 6 || escolha > 9) {
-            System.out.println("É possível escolher apenas entre 6 a 9");
+        int escolha = 0;
+        try {
             escolha = ent.nextInt();
+            while (escolha < 6 || escolha > 9) {
+                System.out.println("É possível escolher apenas entre 6 a 9");
+                escolha = ent.nextInt();
+            }
+        } catch (Exception ex){
+            System.out.println("Letras não são permitidas!");
         }
         switch (escolha) {
             case 6:

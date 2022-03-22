@@ -9,10 +9,15 @@ public class Exercicios1a5 {
         System.out.println(
                   "Qual atividade você deseja avaliar?\n"
                 + "Insira o número da atividade de 1 a 5");
-        int escolha = ent.nextInt();
-        while (escolha < 1 || escolha > 5) {
-            System.out.println("É possível escolher apenas entre 1 a 5");
+        int escolha = 0;
+        try {
             escolha = ent.nextInt();
+            while (escolha < 1 || escolha > 5) {
+                System.out.println("É possível escolher apenas entre 1 a 5");
+                escolha = ent.nextInt();
+            }
+        } catch (Exception ex){
+            System.out.println("Letras não são permitidas!");
         }
         switch (escolha) {
             case 1:

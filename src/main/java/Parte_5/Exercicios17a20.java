@@ -9,10 +9,15 @@ public class Exercicios17a20 {
         System.out.println(
                   "Qual atividade você deseja avaliar?\n"
                 + "Insira o número da atividade de 17 a 20");
-        int escolha = ent.nextInt();
-        while (escolha < 17 || escolha > 20) {
-            System.out.println("É possível escolher apenas entre 17 e 20");
+        int escolha = 0;
+        try {
             escolha = ent.nextInt();
+            while (escolha < 17 || escolha > 20) {
+                System.out.println("É possível escolher apenas entre 17 a 20");
+                escolha = ent.nextInt();
+            }
+        } catch (Exception ex){
+            System.out.println("Letras não são permitidas!");
         }
         switch (escolha) {
             case 17:

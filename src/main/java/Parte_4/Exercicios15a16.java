@@ -9,10 +9,15 @@ public class Exercicios15a16 {
         System.out.println(
                   "Qual atividade você deseja avaliar?\n"
                 + "Insira o número da atividade de 15 a 16");
-        int escolha = ent.nextInt();
-        while (escolha < 15 || escolha > 16) {
-            System.out.println("É possível escolher apenas 15 ou 16");
+        int escolha = 0;
+        try {
             escolha = ent.nextInt();
+            while (escolha < 15 || escolha > 16) {
+                System.out.println("É possível escolher apenas entre 15 a 16");
+                escolha = ent.nextInt();
+            }
+        } catch (Exception ex){
+            System.out.println("Letras não são permitidas!");
         }
         switch (escolha) {
             case 15:

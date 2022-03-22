@@ -43,6 +43,7 @@ public class Exercicios10a13 {
     public static void Exercicio10() {
         Scanner ent = new Scanner(System.in);
         
+        String strPassou = "Você não Passou!";
         System.out.println("Insira a Primeira nota: ");
         double n1 = ent.nextDouble();
         System.out.println("Insira a Segunda nota: ");
@@ -52,10 +53,9 @@ public class Exercicios10a13 {
         double media = Exercicios6a9.media3notas(n1, n2, n3);
         boolean passou = passouMedia5(media);
         if (passou == true) {
-            System.out.println("Você passou!");
-        } else {
-            System.out.println("Você NÃO passou!");
+            strPassou = "Você Passou!";
         }
+        System.out.println(strPassou);
     }
     
     public static boolean passouMedia5(double media) {
